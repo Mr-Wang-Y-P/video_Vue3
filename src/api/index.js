@@ -2,7 +2,7 @@ import axios from 'axios';
 
 // 从环境变量中获取基础 URL
 const baseURL = import.meta.env.VITE_API_BASE_URL;
-console.log('baseURL:', baseURL);
+// console.log('baseURL:', baseURL);
 // 创建 axios 实例
 const api = axios.create({
   baseURL,
