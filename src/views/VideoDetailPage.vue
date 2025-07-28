@@ -213,7 +213,7 @@ const fetchVideoDetail = async () => {
 };
 
 onMounted(() => {
-  // fetchVideoDetail();
+  fetchVideoDetail();
 });
 const playVideo = (videoId) => {
 //   console.log("category:", videoId);

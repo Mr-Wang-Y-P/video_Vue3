@@ -191,9 +191,7 @@ watch(
 );
 
 onMounted(() => {
-  console.log("SearchPage mounted", loading.value);
   fetchVideoDetail();
-  console.log("SearchPage", loading.value);
 });
 // watch
 const setVideoInfo = (videoId) => {

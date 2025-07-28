@@ -194,7 +194,7 @@ const fetchVideoDetail = async () => {
 };
 
 onMounted(() => {
-  // fetchVideoDetail();
+  fetchVideoDetail();
 });
 
 watch(
