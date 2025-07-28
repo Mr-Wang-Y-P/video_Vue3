@@ -184,8 +184,10 @@ const fetchVideoDetail = async () => {
     if (data) {
       video.value = data;
     }
+    loading.value = false;
   } catch (error) {
     console.error("获取视频详情失败:", error);
+    loading.value = false;
   } finally {
     loading.value = false;
   }

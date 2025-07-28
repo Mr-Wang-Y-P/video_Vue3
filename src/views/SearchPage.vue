@@ -158,13 +158,14 @@ const fetchVideoDetail = async () => {
   const { videoId } = route.params; // 假设路由参数名为 videoId
   currentCategory.value = videoId;
   const match = videoId?.match(/(\d+)(?!.*\d)/);
-
+  // console.log("match:", match);
   if (match && match[1]) {
     currentPage.value = parseInt(match[1]);
   } else {
     currentPage.value = 1;
   }
   const newParams = generateSearchUrl(currentCategory.value, currentPage.value);
+  // console.log("newParams:", newParams);
   try {
     loading.value = true;
     const data = await searchData(newParams);
@@ -190,7 +191,8 @@ watch(
 );
 
 onMounted(() => {
-  // fetchVideoDetail();
+  // console.log("SearchPage mounted", loading.value);
+  fetchVideoDetail();
 });
 // watch
 const setVideoInfo = (videoId) => {
